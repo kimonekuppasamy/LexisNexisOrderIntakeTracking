@@ -33,9 +33,10 @@ An order can be cancelled while it is still Pending or Confirmed.
 
 ## AI Usage
 
+### Claude Code
 - Create tests using business logic provided once I had my app structures and basic logic so I could see any gaps:
 Prompt -> 
-Generate unit tests based on the following business logic and criteria, ensure to list any gaps from my existing structure so that I may build :
+Generate unit tests ONLY based on the following business logic and criteria, ensure to list any gaps from my existing structure so that I may build, do not create any API, services or controllers for the actual logic:
 When the same client-provided external reference is submitted again, the system avoids creating duplicate orders and behaves
 consistently from a user’s point of view.
 • Quantities are positive whole numbers; prices are non-negative.
@@ -47,3 +48,5 @@ Accepts new orders and handles repeat submissions of the same client reference w
 • Computes totals on the server.
 • Supports retrieving a single order and listing orders with newest first.
 • Supports changing an order’s status with sensible rules and helpful feedback when a change isn’t allowed.
+
+I used this prompt iteratively, to ensure that the business logic and basic requirements were met.
