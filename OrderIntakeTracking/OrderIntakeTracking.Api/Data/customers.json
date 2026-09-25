@@ -1,0 +1,23 @@
+[
+  {
+    "CustomerId": "c1a7e4b2-6d93-4f81-9a25-38e7b1d60452",
+    "CustomerName": "Sarah Williams",
+    "Email": "admin.admin@example.com",
+    "Phone": "0824567890",
+    "IsAdmin": true
+  },
+  {
+    "CustomerId": "f5b2c891-3e74-46a9-bd18-62a4e9c70531",
+    "CustomerName": "Test test",
+    "Email": "Test.test@example.com",
+    "Phone": "0712345678",
+    "IsAdmin": false
+  },
+  {
+    "CustomerId": "221642b1-4bc6-4ac5-9f8e-0680fb37e464",
+    "CustomerName": "test customer",
+    "Email": "test@test.com",
+    "Phone": "1234567891",
+    "IsAdmin": false
+  }
+]

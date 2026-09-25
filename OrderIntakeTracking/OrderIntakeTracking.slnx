@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="OrderIntakeTracking.Api/OrderIntakeTracking.Api.csproj" />
+  <Project Path="OrderIntakeTracking.Tests/OrderIntakeTracking.Tests.csproj" />
+</Solution>

@@ -1,0 +1,82 @@
+[
+  {
+    "ProductId": "b7e3a8f2-4c91-4d6e-9a12-1f5b8c3e7d20",
+    "ProductSKU": "FLW-001",
+    "ProductName": "Red Rose Bouquet",
+    "ProductDescription": "A beautiful bouquet of twelve fresh red roses.",
+    "ProductQuantity": 0,
+    "ProductPrice": 450
+  },
+  {
+    "ProductId": "2a6f91d4-8b37-45c2-ae19-7d4f3b6c8215",
+    "ProductSKU": "FLW-002",
+    "ProductName": "White Lily Bouquet",
+    "ProductDescription": "An elegant bouquet of fresh white lilies.",
+    "ProductQuantity": 5,
+    "ProductPrice": 380
+  },
+  {
+    "ProductId": "9c2e7b51-6a43-4f18-bd92-3e8a5c714f06",
+    "ProductSKU": "FLW-003",
+    "ProductName": "Sunflower Bouquet",
+    "ProductDescription": "A cheerful bouquet of bright yellow sunflowers.",
+    "ProductQuantity": 18,
+    "ProductPrice": 320.00
+  },
+  {
+    "ProductId": "4d8a2c67-91e5-43bf-a720-6c3f9b185d42",
+    "ProductSKU": "FLW-004",
+    "ProductName": "Pink Tulip Bouquet",
+    "ProductDescription": "A delicate arrangement of fresh pink tulips.",
+    "ProductQuantity": 17,
+    "ProductPrice": 400.00
+  },
+  {
+    "ProductId": "e1f5a936-7c28-4b61-92d4-5a8e3f710c19",
+    "ProductSKU": "FLW-005",
+    "ProductName": "Mixed Spring Bouquet",
+    "ProductDescription": "A colourful seasonal arrangement featuring a variety of fresh flowers.",
+    "ProductQuantity": 30,
+    "ProductPrice": 550.00
+  },
+  {
+    "ProductId": "6b3d8f21-5e94-47a2-c816-9d7f4b350e62",
+    "ProductSKU": "FLW-006",
+    "ProductName": "Purple Orchid Arrangement",
+    "ProductDescription": "An elegant arrangement of vibrant purple orchids.",
+    "ProductQuantity": 10,
+    "ProductPrice": 650.00
+  },
+  {
+    "ProductId": "f82c4a19-3d67-45e1-b920-7a5f8c236d14",
+    "ProductSKU": "FLW-007",
+    "ProductName": "White Rose Bouquet",
+    "ProductDescription": "A classic bouquet of twelve fresh white roses.",
+    "ProductQuantity": 22,
+    "ProductPrice": 425.00
+  },
+  {
+    "ProductId": "3e7a1c58-9b42-4d63-a815-6f2c8e704b31",
+    "ProductSKU": "FLW-008",
+    "ProductName": "Pink Carnation Bouquet",
+    "ProductDescription": "A soft and romantic bouquet of pink carnations.",
+    "ProductQuantity": 16,
+    "ProductPrice": 350.00
+  },
+  {
+    "ProductId": "a5d9f327-2b61-48e4-c903-7f1a6d825b40",
+    "ProductSKU": "FLW-009",
+    "ProductName": "Gerbera Daisy Bouquet",
+    "ProductDescription": "A vibrant bouquet of colourful gerbera daisies.",
+    "ProductQuantity": 24,
+    "ProductPrice": 375.00
+  },
+  {
+    "ProductId": "7c4e2a91-8f53-46bd-b617-3d9a5e280c74",
+    "ProductSKU": "FLW-010",
+    "ProductName": "Luxury Rose Arrangement",
+    "ProductDescription": "A premium arrangement of long-stem roses beautifully presented.",
+    "ProductQuantity": 8,
+    "ProductPrice": 850.00
+  }
+]
