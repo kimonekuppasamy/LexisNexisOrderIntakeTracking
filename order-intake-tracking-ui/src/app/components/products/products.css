@@ -1,0 +1,49 @@
+h1 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #f5f5f5;
+}
+
+th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+td {
+  padding: 18px 16px;
+  font-size: 14px;
+  color: #333;
+  vertical-align: top;
+  border-bottom: 1px solid #eeeeee;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/* Product */
+td:first-child {
+  font-weight: 600;
+}

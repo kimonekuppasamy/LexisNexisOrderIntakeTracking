@@ -1,0 +1,43 @@
+<nav>
+
+
+
+  @if (!isAdmin) {
+  <a routerLink="/products">
+    Products
+  </a>
+  <a routerLink="/cart">
+    Cart
+  </a>
+
+  @if (isLoggedIn) {
+  <a routerLink="/orders">
+    Orders
+  </a>
+  }
+
+  }
+
+  @if (isAdmin) {
+  <a routerLink="/products">
+    Manage Products
+  </a>
+
+  <a routerLink="/orders">
+    Manage Orders
+  </a>
+  }
+
+  @if (isLoggedIn) {
+  <a (click)="logout()">
+    Logout
+  </a>
+  } @else {
+  <a routerLink="/login">
+    Login
+  </a>
+  }
+
+</nav>
+
+<router-outlet />

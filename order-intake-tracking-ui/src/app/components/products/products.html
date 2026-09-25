@@ -1,0 +1,95 @@
+<h1>Flowers</h1>
+
+@if (!isAdmin) {
+<button type="button" (click)="viewCart()">
+  View Cart ({{ totalItemsInCart() }})
+</button>
+}
+
+<p>Product count: {{ products.length }}</p>
+
+@if (products.length > 0) {
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Available</th>
+
+      @if (!isAdmin) {
+      <th>Action</th>
+      }
+
+      @if (isAdmin) {
+      <th>Actions</th>
+      }
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (product of products; track product.productId) {
+
+    <tr>
+      <td>{{ product.productName }}</td>
+
+      <td>{{ product.productDescription }}</td>
+
+      <td>
+        @if (isAdmin && editingProductId === product.productId) {
+        <input type="number" [(ngModel)]="product.productPrice" min="0" />
+        } @else {
+        R{{ product.productPrice }}
+        }
+      </td>
+
+      <td>
+        @if (isAdmin && editingProductId === product.productId) {
+        <input type="number" [(ngModel)]="product.productQuantity" min="0" />
+        } @else {
+        {{ product.productQuantity }}
+        }
+      </td>
+
+      @if (!isAdmin && product.productQuantity > 0) {
+      <td>
+        <button type="button" (click)="addToCart(product)">
+          Add to Cart
+        </button>
+      </td>
+      }
+
+      @if (isAdmin) {
+      <td>
+        @if (editingProductId === product.productId) {
+
+        <button type="button" (click)="saveProduct(
+                product.productId,
+                product.productQuantity,
+                product.productPrice
+              )">
+          Save
+        </button>
+
+        <button type="button" (click)="cancelEdit()">
+          Cancel
+        </button>
+
+        } @else {
+
+        <button type="button" (click)="editProduct(product)">
+          Edit
+        </button>
+
+        }
+      </td>
+      }
+
+    </tr>
+
+    }
+  </tbody>
+</table>
+
+}

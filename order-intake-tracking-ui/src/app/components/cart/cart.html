@@ -1,0 +1,67 @@
+<h1>Shopping Cart</h1>
+
+@if (cart.cartProducts.length === 0) {
+
+<p>Your cart is empty.</p>
+<button type="button" (click)="continueShopping()">
+  Continue Shopping
+</button>
+}
+@else {
+
+@for (item of cart.cartProducts; track item.productId) {
+
+<div class="cart-item">
+
+  <h2>{{ item.product?.productName }}</h2>
+
+  <p>
+    {{ item.product?.productDescription }}
+  </p>
+
+  <p>
+    Price: R{{ item.price.toFixed(2) }}
+  </p>
+
+  <div>
+    <button type="button" (click)="decreaseQuantity(item)" [disabled]="item.quantity <= 1">
+      -
+    </button>
+
+    <span>{{ item.quantity }}</span>
+
+    <button type="button" (click)="increaseQuantity(item)"
+      [disabled]="(item.quantity >= (item.product?.productQuantity ?? 0))">
+      +
+    </button>
+  </div>
+
+  <p>
+    Subtotal:
+    R{{ (item.price * item.quantity).toFixed(2) }}
+  </p>
+
+  <button type="button" (click)="removeItem(item)">
+    Remove
+  </button>
+
+</div>
+
+}
+
+<hr>
+
+<p>
+  Items: {{ getTotalItems() }}
+</p>
+
+<p>
+  Total: R{{ getCartTotal().toFixed(2) }}
+</p>
+@if (errorMessage) {
+<p class="error">{{ errorMessage }}</p>
+}
+<button type="button" (click)="submitOrder(cart)">
+  Submit Order
+</button>
+}

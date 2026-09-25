@@ -1,0 +1,80 @@
+
+<input type="text" [(ngModel)]="orderNumber" placeholder="Enter Order Number..." />
+<button (click)="getOrder()">Search</button>
+@if (successMessage) {
+<p class="success">{{ successMessage }}</p>
+}
+@if (errorMessage) {
+<p class="error">{{ errorMessage }}</p>
+}
+<table>
+
+    <thead>
+
+        <tr>
+
+            @if(customer?.isAdmin) {
+            <th>Customer</th>
+            }
+            <th>Order Number</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Order Date</th>
+            <th>Status</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @for (order of orders; track order.orderId) {
+
+        <tr>
+
+            @if(customer?.isAdmin) {
+            <td>{{ order.customerName }}</td>
+            }
+            <td>
+                {{ order.orderNumber }}
+            </td>
+
+            <td>
+                @for (item of order.orderItems ?? []; track $index) {
+                <div>
+                    {{ item.product?.productName }}
+                    × {{ item.quantity }}
+                    — R{{ item.price }}
+                </div>
+                }
+            </td>
+
+            <td>
+                R{{ order.orderTotal }}
+            </td>
+            <td>
+                {{ order.orderDate }}
+            </td>
+
+            <td>
+                @if (customer?.isAdmin) {
+                <select (change)="updateOrderStatus(order, $event)">
+                    @for (status of statusOptions(order); track status) {
+                    <option [value]="status" [selected]="status === order.orderStatus">
+                        {{ getOrderStatus(status) }}
+                    </option>
+                    }
+                </select>
+                } @else {
+                <span class="status">
+                    {{ getOrderStatus(order.orderStatus) }}
+                </span>
+                }
+
+            </td>
+
+        </tr>
+
+        }
+
+    </tbody>
+
+</table>

@@ -1,0 +1,44 @@
+<h1>{{ invalidCustomer ? 'Create Account' : 'Login' }}</h1>
+
+@if (!invalidCustomer) {
+
+<form (ngSubmit)="login()">
+
+  <label for="email">Email</label>
+
+  <input id="email" type="email" [(ngModel)]="email" name="email" required />
+
+  <button type="submit">
+    Login
+  </button>
+
+</form>
+
+} @else {
+
+<form (ngSubmit)="createCustomer()">
+
+  <label for="customerName">Name</label>
+
+  <input id="customerName" type="text" [(ngModel)]="customerName" name="customerName" required />
+
+  <label for="email">Email</label>
+
+  <input id="email" type="email" [(ngModel)]="email" name="email" required />
+
+  <label for="phone">Phone</label>
+
+  <input id="phone" type="tel" [(ngModel)]="phone" name="phone" required />
+
+  <button type="submit">
+    Create Account
+  </button>
+
+</form>
+
+}
+
+@if (errorMessage) {
+
+<p>{{ errorMessage }}</p>
+}
